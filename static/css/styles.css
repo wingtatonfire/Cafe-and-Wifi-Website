@@ -1,0 +1,30 @@
+body {
+    background-image: url("../images/2379-17.jpg");
+    background-size: cover;
+    background-position: center top;
+}
+body {
+    margin: auto;
+    width: auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div {
+    margin: auto;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.btns {
+    float: right;
+}
+
+#form {
+    background: rgba(128, 128, 128, 0.5) /* Green background with 30% opacity */
+}
+

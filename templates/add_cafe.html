@@ -1,0 +1,14 @@
+{% from 'bootstrap5/form.html' import render_form, render_form_row %}
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8" id="form">
+      <h1>Add a new cafe into the database</h1>
+
+      {{ render_form(form, novalidate=True) }}
+
+    </div>
+  </div>
+</div>
+{% endblock %}

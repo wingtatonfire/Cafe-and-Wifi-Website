@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+  <h2 class="display-4 text-left">All cafes</h2>
+  <table class="table table-hover table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Map url</th>
+      <th scope="col">location</th>
+      <th scope="col">Has Sockets</th>
+      <th scope="col">Has Toilet</th>
+      <th scope="col">Has Wifi</th>
+      <th scope="col">Can Take Calls</th>
+      <th scope="col">Seats</th>
+      <th scope="col">Coffee Price</th>
+    </tr>
+  </thead>
+  {% for cafe in cafes %}
+  <tbody>
+    <tr>
+      <th>{{ cafe.name }}</th>
+      <td><a href="{{ cafe.map_url }}">Map Link</a></td>
+      <td>{{ cafe.location }}</td>
+      <td>{{ cafe.has_sockets }}</td>
+      <td>{{ cafe.has_toilet }}</td>
+      <td>{{ cafe.has_wifi }}</td>
+      <td>{{ cafe.can_take_calls }}</td>
+      <td>{{ cafe.seats }}</td>
+      <td>{{ cafe.coffee_price }}</td>
+    </tr>
+  </tbody>
+
+  {% endfor %}
+</table>
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <a href="{{ url_for('add_cafe') }}">
+          <button type="button" class="btn btn-info">Add Cafe</button>
+        </a>
+      </div>
+      <div class="col text-center">
+        <a href="{{ url_for('all_cafe') }}">
+          <button type="button" class="btn btn-info">Edit Cafe</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

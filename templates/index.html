@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container text-center">
+<h1 class="display-1">Starbucks Verse McCafe</h1>
+  <h2 class="display-4">Let's find out the Cafe beside you!!!</h2>
+  <a href="{{ url_for('all_cafe') }}">
+<button type="button" class="btn btn-info">Show Me</button>
+  </a>
+</div>
+{% endblock %}
